@@ -1,6 +1,6 @@
 import path from 'path'
 
-const UserDetailConfig = (url) => (
+const UserDetail = (url) => (
   {
     url: url,
     templateUrl: path.join(__dirname, 'user_detail.html'),
@@ -16,7 +16,6 @@ const UserDetailConfig = (url) => (
 
       userStore.getUserInvoices($stateParams.id)
         .then((invoices) =>{
-          console.log(invoices);
           $scope.invoices = invoices.data;
         })
         .catch((e) =>{
@@ -26,4 +25,4 @@ const UserDetailConfig = (url) => (
   }
 );
 
-export default UserDetailConfig
+export default UserDetail

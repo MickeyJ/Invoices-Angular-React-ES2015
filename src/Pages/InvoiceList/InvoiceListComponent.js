@@ -4,7 +4,7 @@ const InvoiceListComponent = (props) => {
   const {invoices, $filter} = props;
   return (
     <div>
-      <table>
+      <table className="u-full-width">
         <tbody>
         <tr>
           <th>ID</th>

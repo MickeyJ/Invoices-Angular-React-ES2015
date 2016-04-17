@@ -1,6 +1,6 @@
 import path from 'path'
 
-const InvoiceDetailConfig = (url) => (
+const InvoiceDetail = (url) => (
   {
     url: url,
     templateUrl: path.join(__dirname, 'invoice_detail.html'),
@@ -17,4 +17,4 @@ const InvoiceDetailConfig = (url) => (
   }
 );
 
-export default InvoiceDetailConfig
+export default InvoiceDetail

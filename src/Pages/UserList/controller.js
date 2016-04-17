@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import path from 'path'
 import UserListComponent from './UserListComponent'
 
-const UserListConfig = (url) => (
+const UserList = (url) => (
   {
     url: url,
     templateUrl: path.join(__dirname, 'user_list.html'),
@@ -26,4 +26,4 @@ const UserListConfig = (url) => (
   }
 );
 
-export default UserListConfig
+export default UserList

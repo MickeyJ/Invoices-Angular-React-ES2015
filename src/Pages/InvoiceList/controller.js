@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import path from 'path'
 import InvoiceListComponent from './InvoiceListComponent'
 
-const InvoiceListConfig = (url) => (
+const InvoiceList = (url) => (
   {
     url: url,
     templateUrl: path.join(__dirname, 'invoice_list.html'),
@@ -25,4 +25,4 @@ const InvoiceListConfig = (url) => (
   }
 );
 
-export default InvoiceListConfig
+export default InvoiceList

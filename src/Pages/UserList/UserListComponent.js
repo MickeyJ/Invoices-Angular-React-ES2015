@@ -4,7 +4,7 @@ const UserListComponent = (props) => {
   const {users} = props;
   return (
     <div>
-      <table>
+      <table className="u-full-width">
         <tbody>
         <tr>
           <th>ID</th>
