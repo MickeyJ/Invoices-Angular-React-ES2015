@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="someApp">
+  <head >
+    <meta charset="UTF-8" >
+    <title >Document</title >
+    <script src="bower_components/jquery/dist/jquery.min.js"></script >
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css" >
+  </head >
+  <body ng-cloak>
+    <nav>
+      <a ui-sref="/" >Home</a>
+      <a ui-sref="invoices" >Invoices</a>
+      <a ui-sref="users" >Users</a>
+    </nav>
+
+    <div ui-view></div>
+    <script src="client/bundle.js"></script >
+
+  </body >
+</html >

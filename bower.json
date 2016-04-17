@@ -1,0 +1,14 @@
+{
+  "name": "angular-react-demo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mickey <develop.agility@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "skeleton": "^2.0.4",
+    "jquery": "^2.2.3"
+  }
+}

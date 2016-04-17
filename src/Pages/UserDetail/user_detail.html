@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <h3>User</h3>
+    <tr>
+      <th>Name:</th>
+      <td>{{user.name}}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+  <table>
+    <h3>Invoices</h3>
+    <tr ng-repeat="i in invoices">
+      <th>{{i.service}}</th>
+      <td>{{i.date | date}}</td>
+      <td>{{i.description}}</td>
+      <td>{{i.total}}</td>
+    </tr>
+  </table>
+</div>
