@@ -1,10 +1,9 @@
 import path from 'path'
-const htmlTemplate = path.join(__dirname, 'user_detail.html');
 
 const UserDetailConfig = (url) => (
   {
     url: url,
-    templateUrl: htmlTemplate,
+    templateUrl: path.join(__dirname, 'user_detail.html'),
     controller: ($scope, $stateParams, userStore) =>{
 
       userStore.getUser($stateParams.id)

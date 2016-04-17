@@ -1,10 +1,9 @@
 import path from 'path'
-const htmlTemplate = path.join(__dirname, 'invoice_detail.html');
 
 const InvoiceDetailConfig = (url) => (
   {
     url: url,
-    templateUrl: htmlTemplate,
+    templateUrl: path.join(__dirname, 'invoice_detail.html'),
     controller: ($scope, $stateParams, invoiceStore) =>{
 
       invoiceStore.getInvoice($stateParams.id)

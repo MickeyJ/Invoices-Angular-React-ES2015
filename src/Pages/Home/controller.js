@@ -1,10 +1,9 @@
 import path from 'path'
-const htmlTemplate = path.join(__dirname, 'home.html');
 
 const HomePageConfig = (url) => (
   {
     url: url,
-    templateUrl: htmlTemplate,
+    templateUrl: path.join(__dirname, 'home.html'),
     controller: ($scope) =>{
 
       $scope.title = 'Home Page'
