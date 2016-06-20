@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="someApp">
   <head >
+    <base href="/" >
     <meta charset="UTF-8" >
     <title >Document</title >
-    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script >-->
-    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css" >
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css" />
+    <script src="bundle.js"></script >
   </head >
-  <body ng-cloak>
+  <body>
     <nav>
       <a ui-sref="/" >Home</a>
       <a ui-sref="invoices" >Invoices</a>
@@ -14,7 +15,6 @@
     </nav>
 
     <div ui-view class="container"></div>
-    <script src="client/bundle.js"></script >
 
   </body >
 </html >

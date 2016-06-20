@@ -1,29 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import path from 'path'
 import UserListComponent from './UserListComponent'
 
-const UserList = (url) => (
-  {
-    url: url,
-    templateUrl: path.join(__dirname, 'user_list.html'),
-    controller: ($scope, $filter, userStore) =>{
+class UserListController{
+  constructor($scope, $filter, userStore){
+    
+    const { getAllUsers } = userStore;
+    
+    getAllUsers()
+      .then((users) =>{
+        $scope.message = 'Users';
+        $scope.userAmount = users.data.length;
 
-      userStore.getAllUsers()
-        .then((users) =>{
-          $scope.message = 'Users';
-          $scope.userAmount = users.data.length;
-
-          ReactDOM.render(
-            <UserListComponent users={users.data} $filter={$filter}/>,
-            document.getElementById('user-list')
-          )
-        })
-        .catch((e) =>{
-          if(e) throw new Error(e)
-        })
-    }
+        ReactDOM.render(
+          <UserListComponent users={users.data} $filter={$filter}/>,
+          document.getElementById('user-list')
+        )
+      })
+      .catch((e) =>{
+        if(e) throw new Error(e)
+      })
   }
-);
+}
 
-export default UserList
+
+export default [
+  '$scope',
+  '$filter',
+  'userStore',
+  UserListController
+]
